@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:islami_test/ChapterDetails/ChapterDetailsScreen.dart';
 import 'package:islami_test/HomeScreen/Hadeth/HadethDetailseScreen.dart';
 
 import 'Hadeth.dart';
@@ -22,7 +20,7 @@ class HadethTitleWidget extends StatelessWidget {
           child: Center(
               child: Text(
             hadeth.title,
-            style: TextStyle(fontSize: 25),
+            style: Theme.of(context).textTheme.bodyMedium,
           ))),
     );
   }

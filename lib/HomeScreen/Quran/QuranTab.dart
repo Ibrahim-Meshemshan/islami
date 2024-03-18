@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import 'ChapterTitleWidget.dart';
 
@@ -142,7 +142,7 @@ class QuranTab extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 64),
                 width: double.infinity,
                 height: 1,
-                color: Color(0xffB7935F),
+                color: Theme.of(context).colorScheme.secondary,
               ),
             ),
           )

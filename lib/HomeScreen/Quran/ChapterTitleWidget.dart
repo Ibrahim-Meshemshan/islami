@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_test/ChapterDetails/ChapterDetailsScreen.dart';
 
@@ -20,7 +19,7 @@ class ChapterTitleWidget extends StatelessWidget {
           child: Center(
               child: Text(
             title,
-            style: TextStyle(fontSize: 25),
+            style: Theme.of(context).textTheme.bodyMedium,
           ))),
     );
   }

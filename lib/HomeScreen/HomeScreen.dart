@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_test/HomeScreen/Hadeth/HadethTab.dart';
 import 'package:islami_test/HomeScreen/Quran/QuranTab.dart';
+import 'package:islami_test/MyThemData.dart';
 
 import 'Radio/RadioTab.dart';
 import 'Tasbeh/Tasbeh.dart';
@@ -25,7 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
       height: double.infinity,
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("assets/images/default_bg.png"),
+        image: AssetImage(MyThemData.isDarkEnable
+            ? "assets/images/background_dark.png"
+            : "assets/images/default_bg.png"),
         fit: BoxFit.fill,
       )),
       child: Scaffold(
@@ -38,26 +40,23 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: (index) => setState(() {
                   selectIndex = index;
                 }),
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                  backgroundColor: Color(0xffB7935F),
+                  backgroundColor: Theme.of(context).primaryColor,
                   icon: ImageIcon(
                     AssetImage("assets/images/icon_quran.png"),
                     size: 30,
                   ),
                   label: "قران"),
               BottomNavigationBarItem(
-                  backgroundColor: Color(0xffB7935F),
                   icon: ImageIcon(AssetImage("assets/images/icon_sebha.png"),
                       size: 30),
                   label: "تسبيح"),
               BottomNavigationBarItem(
-                  backgroundColor: Color(0xffB7935F),
                   icon: ImageIcon(AssetImage("assets/images/icon_hadeth.png"),
                       size: 30),
                   label: "حديث"),
               BottomNavigationBarItem(
-                  backgroundColor: Color(0xffB7935F),
                   icon: ImageIcon(AssetImage("assets/images/icon_radio.png"),
                       size: 30),
                   label: "راديو"),
