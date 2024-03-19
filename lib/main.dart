@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
         HadethDetailseScreen.routeName: (context) => HadethDetailseScreen(),
       },
       home: Scaffold(),
-      title: 'Flutter Demo',
       theme: MyThemData.light,
       themeMode: ThemeMode.dark,
       darkTheme: MyThemData.dark,
