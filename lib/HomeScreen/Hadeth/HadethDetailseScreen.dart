@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_test/HomeScreen/Hadeth/Hadeth.dart';
+
+import '../../MyThemData.dart';
 
 class HadethDetailseScreen extends StatelessWidget {
   static const String routeName = 'HadethDetailseScreen';
@@ -15,7 +16,9 @@ class HadethDetailseScreen extends StatelessWidget {
       height: double.infinity,
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("assets/images/default_bg.png"),
+        image: AssetImage(MyThemData.isDarkEnable
+            ? "assets/images/background_dark.png"
+            : "assets/images/default_bg.png"),
         fit: BoxFit.fill,
       )),
       child: Scaffold(

@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_test/ChapterDetails/VerseItem.dart';
+
+import '../MyThemData.dart';
 
 class ChapterDetailsScreen extends StatefulWidget {
   static const String routeName = 'chapter_details';
@@ -27,7 +28,9 @@ class _ChapterDetailsScreenState extends State<ChapterDetailsScreen> {
       height: double.infinity,
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("assets/images/default_bg.png"),
+        image: AssetImage(MyThemData.isDarkEnable
+            ? "assets/images/background_dark.png"
+            : "assets/images/default_bg.png"),
         fit: BoxFit.fill,
       )),
       child: Scaffold(
