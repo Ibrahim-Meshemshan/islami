@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_test/HomeScreen/Hadeth/HadethTab.dart';
 import 'package:islami_test/HomeScreen/Quran/QuranTab.dart';
 
@@ -31,36 +31,36 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text("اسلامي"),
+          title: Text(AppLocalizations.of(context)!.apptitle),
         ),
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: selectIndex,
             onTap: (index) => setState(() {
                   selectIndex = index;
                 }),
-            items: const [
+            items: [
               BottomNavigationBarItem(
                   backgroundColor: Color(0xffB7935F),
                   icon: ImageIcon(
                     AssetImage("assets/images/icon_quran.png"),
                     size: 30,
                   ),
-                  label: "قران"),
+                  label: AppLocalizations.of(context)!.quran_tab),
               BottomNavigationBarItem(
                   backgroundColor: Color(0xffB7935F),
                   icon: ImageIcon(AssetImage("assets/images/icon_sebha.png"),
                       size: 30),
-                  label: "تسبيح"),
+                  label: AppLocalizations.of(context)!.tasbeh_tab),
               BottomNavigationBarItem(
                   backgroundColor: Color(0xffB7935F),
                   icon: ImageIcon(AssetImage("assets/images/icon_hadeth.png"),
                       size: 30),
-                  label: "حديث"),
+                  label: AppLocalizations.of(context)!.hadeth_tab),
               BottomNavigationBarItem(
                   backgroundColor: Color(0xffB7935F),
                   icon: ImageIcon(AssetImage("assets/images/icon_radio.png"),
                       size: 30),
-                  label: "راديو"),
+                  label: AppLocalizations.of(context)!.radio_tab),
             ]),
         body: tabs[selectIndex],
       ),

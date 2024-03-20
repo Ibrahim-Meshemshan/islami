@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_test/ChapterDetails/ChapterDetailsScreen.dart';
 import 'package:islami_test/HomeScreen/Hadeth/HadethDetailseScreen.dart';
 import 'package:islami_test/SplashScreen/SplashScreen.dart';
@@ -25,7 +26,6 @@ class MyApp extends StatelessWidget {
         HadethDetailseScreen.routeName: (context) => HadethDetailseScreen(),
       },
       home: Scaffold(),
-      title: 'Flutter Demo',
       theme: ThemeData(
         cardTheme: CardTheme(
             color: Colors.white,
@@ -52,6 +52,9 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale("en"),
     );
   }
 }
