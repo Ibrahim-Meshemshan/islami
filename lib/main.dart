@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
     );
+    /// any word for new branch
   }
   Future<void> initSharedPreferences()async{
     final SharedPreferences prefs = await SharedPreferences.getInstance();
